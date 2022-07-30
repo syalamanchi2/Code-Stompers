@@ -1,5 +1,5 @@
 {
-  "name": "policy-compare-tool",
+  "name": "policy-comparision-tool",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

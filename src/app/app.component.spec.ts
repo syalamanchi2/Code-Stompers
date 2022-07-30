@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'policy-compare-tool'`, () => {
+  it(`should have as title 'policy-comparision-tool'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('policy-compare-tool');
+    expect(app.title).toEqual('policy-comparision-tool');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('policy-compare-tool app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('policy-comparision-tool app is running!');
   });
 });
