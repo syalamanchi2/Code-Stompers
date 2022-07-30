@@ -1,1 +1,53 @@
-<p>insuranceproducts works!</p>
+<div>
+<table>
+    <tr>
+<td>
+        <div class="dropdown">
+            Line of Business
+             <select (click)="onLineOfBusinessChange($event)">
+                    <option>Select</option>
+                 <option>Auto</option>
+                 <option>Health</option>
+             </select>
+              </div>
+            </td>   
+<td>
+              <div class="dropdown">
+                  Company
+                    <select (click)="onCompanyChange($event)">
+                            <option>Select</option>
+                            <option *ngFor="let item of companyArray">{{item.companyName}}</option>
+                            
+                        </select>
+                  </div>
+                </td>
+                <td>
+                        <div class="dropdown">
+                            Policy Name
+                              <select (click)="onPolicyTypeChange($event)">
+                                      <option>Select</option>
+                                      <option *ngFor="let item of policyTypeArray">{{item.SubPolicyType}}</option>
+                                  </select>
+                            </div>
+                          </td>
+
+                          <td>
+                                <button *ngIf="compareDisable" (click)="onCompareClick($event)"> Compare With Similar</button>
+                                  </td>
+                </tr>
+            </table>
+            <br/> <br/> <br/> <br/>
+            <div *ngIf="compareDataShow" id="compareDiv">
+                    <div class="card">
+                            <div class="card-body">
+                              <!-- PolicyType: {{}} -->
+                            </div>
+                          </div>
+                          <div class="card">
+                                <div class="card-body">
+                                  This is some text within a card body.
+                                </div>
+                              </div>
+
+            </div>
+</div>
